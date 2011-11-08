@@ -14,10 +14,8 @@
   store all the 104char segments after the primer
   
   TODO:
-  find the variable regions
-  catagorize the data
-  find permutations
-  generater pyroprints
+  generate pyroprints (python)
+  generate pyroprints (CUDA)
   compare pyroprints
 """
 
@@ -62,7 +60,7 @@ def main():
       #print('Found Primer At:' + str(primerLoc))
       #print("Found Primer in Sequence:" + sequence[primerLoc:primerLoc+20])
       #print("Found Sequence after Primer:" + sequence[primerLoc+20:primerLoc+20+140])
-  #get next 104 chars
+      #get next 104 chars
       seqList.append(sequence[primerLoc+20:primerLoc+20+140])
   uniqueSequences = []
   #find unique strings
@@ -74,24 +72,22 @@ def main():
       #print(oneSeq)
       uniqueSequences.append(oneSeq)
       # else:
-  #uniqueSequences.append(oneSeq)
+      #uniqueSequences.append(oneSeq)
 
   print("uniqueSequences") 
   print uniqueSequences
   allCombinations = itertools.combinations_with_replacement(uniqueSequences,7)
   #print ("Number of Unique Combinations: " + len(allCombinations))
-#print(len(allCombinations))
+  #print(len(allCombinations))
   numCombos = 0
   for oneCombo in allCombinations:
     numCombos = numCombos +1
     print(oneCombo)
-#print(numCombos)
-# for i in range(0, 100):
-#   print(allCombinations[0])
-  #get nucleotides
+    #print(numCombos)
+    # for i in range(0, 100):
+    #   print(allCombinations[0])
 
-
-  #save sequence with title
+  #perform Pearson Corralation on pyroprints
 
   #save all sequences 
 
