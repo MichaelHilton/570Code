@@ -3,15 +3,16 @@
 # Licensed under the Apache License, Version 2.0
 # http://www.apache.org/licenses/LICENSE-2.0
 
-# Google's Python Class
-# http://code.google.com/edu/languages/google-python-class/
 
-"""This is some sample code I found that I am extending
+"""
   So far I have done:
   Find all files with DNA info in DIR
   Parse all files and find all DNA Chunks
   in each chunk find the primer sequence (if it exists)
   store all the 104char segments after the primer
+  find all unique sequences of 104char segments
+  find all possible choose 7 combinations of unique sequences
+
   
   TODO:
   generate pyroprints (python)
